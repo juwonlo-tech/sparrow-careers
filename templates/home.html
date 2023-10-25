@@ -10,6 +10,7 @@
         width: 100%;
         height: 320px;
         object-fit: cover;
+        margin-bottom: 16px;
       }
       h1 {
         font-family: cursive; 
@@ -25,13 +26,18 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://careers-website--toluwasejuwonlo.repl.co/static/banner.jpg">
     <div id="container">
       <h1 class="text-center">Sparrow Inc. Careers </h1>
-      <img class="img-fluid" id="banner" src="https://careers-website--toluwasejuwonlo.repl.co/static/banner.jpg" >
-  
-      <h2 class="text-center mt-2 mb-4">About Sparrow</h2>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas sed tempus urna. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Morbi tristique senectus et netus et malesuada fames. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Amet porttitor eget dolor morbi non arcu risus. Vestibulum lectus mauris ultrices eros in cursus turpis. Felis donec et odio pellentesque diam volutpat commodo sed. Turpis massa tincidunt dui ut ornare lectus sit. Dui nunc mattis enim ut tellus elementum sagittis. Pretium lectus quam id leo in. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Netus et malesuada fames ac. Eget aliquet nibh praesent tristique. Ac turpis egestas sed tempus urna et pharetra pharetra.
-    </p>
+      <div class="row" style="margin-bottom: 16px;">
+        <div class="col-md-6">
+          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas sed tempus urna. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit eget. Morbi tristique senectus et netus et malesuada fames. Pharetra vel turpis nunc eget lorem dolor sed viverra ipsum. Amet porttitor eget dolor morbi non arcu risus. Vestibulum lectus mauris ultrices eros in cursus turpis. Felis donec et odio pellentesque diam volutpat commodo sed. Turpis massa tincidunt dui ut ornare lectus sit. Dui nunc mattis enim ut tellus elementum sagittis. Pretium lectus quam id leo in. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Netus et malesuada fames ac. Eget aliquet nibh praesent tristique. Ac turpis egestas sed tempus urna et pharetra pharetra.</p>
+        </div>
+      <div class="d-none d-md-block col-6">
+        <img src="/static/people.jpg" style="height:320px; border-radius: 4px;">
+      </div>
+    </div>
       <h2 class="text-center mt-2 mb-4">Open Positions</h2>
       <div> 
         {% for job in jobs %}
@@ -40,9 +46,10 @@
         </div>
           <div class="text-center mt-4">
             <button class="btn btn-primary btn-lg">Contact Us</button>
-            <p class="mt-4"> Copyright 2023, Sparrow </p>  
+             
           </div>
       </div>
     </div>
+    {% include 'footer.html' %}
   </body>
 </html>
