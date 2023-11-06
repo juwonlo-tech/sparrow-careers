@@ -1,2 +1,2 @@
 # careers-website
-A demo careers website built with python
+A static careers website built with Python's web framework-  Flask.
