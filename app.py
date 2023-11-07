@@ -1,36 +1,21 @@
 from flask import Flask, jsonify, render_template
 
-app = Flask(__name__)
+from database import load_jobs_from_db
 
-JOBS = [{
-    'id': 1,
-    'title': 'Data Analyst',
-    'location': 'New York',
-    'salary': 80000
-}, {
-    'id': 2,
-    'title': 'Data Analyst',
-    'location': 'Calgary',
-    'salary': 65000
-}, {
-    'id': 3,
-    'title': 'Cloud Engineer',
-    'location': 'New Delhi',
-    'salary': 120000
-}, {
-    'id': 4,
-    'title': 'UI/UX Developer',
-    'location': 'Remote'
-}]
+app = Flask(__name__)
 
 
 @app.route('/')
 def hello_world():
-  return render_template('home.html', jobs=JOBS)
-  
+  jobs = load_jobs_from_db()
+  return render_template('home.html', jobs=jobs)
+
+
 @app.route('/api/jobs')
 def list_jobs():
-  return jsonify(JOBS)
+  jobs = load_jobs_from_db()
+  return jsonify(jobs)
+
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug=True)
