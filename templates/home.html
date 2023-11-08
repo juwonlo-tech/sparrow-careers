@@ -1,40 +1,21 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sparrow Careers</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <style>
-      #banner {
-        width: 100%;
-        height: 320px;
-        object-fit: cover;
-        margin-bottom: 16px;
-      }
-      h1 {
-        font-family: cursive; 
-      }
-      h2 { 
-        font-family: cursive; 
-      }
-      #container{
-        max-width: 720px;
-        margin: 0 auto 0 auto;
-      }
-      
-    </style>
+  <head> 
+    <title>SParrow Careers</title>
+    {% include 'bootstrap.html' %}
   </head>
+  
   <body>
     {% include 'nav.html' %}
+    {% include 'banner.html' %}
     <img class="img-fluid" id="banner" src="https://careers-website--toluwasejuwonlo.repl.co/static/banner.jpg">
     <div id="container">
       <h1 class="text-center">Sparrow Inc. Careers </h1>
       <div class="row" style="margin-bottom: 16px;">
         <div class="col-md-6">
-          <p class="lead">At Sparrows Inc, our mission is to make information technology easily integrated into existing business structures. We believe that technology should be accessible and user-friendly, not intimidating or confusing. Our team is dedicated to providing innovative solutions that help businesses streamline their operations and improve their bottom line. We understand that every business is unique, which is why we take a personalized approach to each project we undertake. Our goal is to help businesses of all sizes and industries leverage the power of technology to achieve their goals. </p> 
+          <p class="lead">At Sparrow Inc, our mission is to make information technology easily integrated into existing business structures. We believe that technology should be accessible and user-friendly, not intimidating or confusing. Our team is dedicated to providing innovative solutions that help businesses streamline their operations and improve their bottom line. We understand that every business is unique, which is why we take a personalized approach to each project we undertake. Our goal is to help businesses of all sizes and industries leverage the power of technology to achieve their goals. </p> 
 
-          <p class="lead">Our vision is to become a leader in the information technology industry by providing top-notch solutions that help businesses succeed in today's fast-paced and ever-changing market. We believe that technology should be an asset, not a liability, and we work tirelessly to ensure that our clients are equipped with the tools they need to stay ahead of the competition. Our team consists of experienced professionals who are passionate about technology and are dedicated to providing exceptional service to our clients. We are committed to staying up-to-date with the latest trends and innovations in the industry to ensure that we are always providing the best possible solutions to our clients. At Sparrows Inc, we are committed to helping businesses thrive in the digital age.
+          <p class="lead">Our vision is to become a leader in the information technology industry by providing top-notch solutions that help businesses succeed in today's fast-paced and ever-changing market. We believe that technology should be an asset, not a liability, and we work tirelessly to ensure that our clients are equipped with the tools they need to stay ahead of the competition. Our team consists of experienced professionals who are passionate about technology and are dedicated to providing exceptional service to our clients. We are committed to staying up-to-date with the latest trends and innovations in the industry to ensure that we are always providing the best possible solutions to our clients. At Sparrow Inc, we are committed to helping businesses thrive in the digital age.
           </p>
         </div>
       <div class="d-none d-md-block col-6">
